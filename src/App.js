@@ -3,26 +3,26 @@ import './App.scss';
 import Commit from './components/Commit/Commit';
 import Header from './components/Header/Header';
 import getCommits from './service/octokit-service';
-
+const REFRESH_TIME = 30;
 function App ()
 {
   const [commits, setCommits ] = useState([]);
-  const [count, setCount ] = useState(30);
+  const [count, setCount ] = useState(REFRESH_TIME);
   const getCommitData = () => {
     getCommits().then(json => {
-      setCount(() => 30);
+      setCount(() => REFRESH_TIME);
       setCommits(() => json.data);
     })
   }
   useEffect( () => {
+    const interval = setInterval(() => {
+      setCount(prevCount =>  prevCount - 1);
+    }, 1000);
     if(count < 0) {
       getCommitData();
-    } else {
-      setTimeout(()=> {
-        setCount(prevCount =>  prevCount - 1);
-      },1000)
     }
-  }, [count] );
+    return () => clearInterval(interval);
+  }, [commits] );
   useEffect( () => {
     getCommitData();
   }, [] );
