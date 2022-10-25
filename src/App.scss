@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  max-height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
+@media screen and (min-width:640px){
+  .body {
+    width: 600px;
+  }
+}

@@ -1,0 +1,25 @@
+.commit {
+  margin: 1rem;
+  &__wrapper {
+    padding: 1.5rem;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px #e0e0e0;
+    background-color: white;
+  }
+  &__header {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  &__info {
+    font-weight: bold;
+  }
+  &__time {
+    color: gray;
+    font-weight: 600;
+    margin-right: 0.4rem;
+  }
+  &__user {
+    margin-left: 0.4rem;
+  }
+}
