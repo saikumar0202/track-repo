@@ -16,11 +16,14 @@ function App ()
   }
   useEffect( () => {
     const interval = setInterval(() => {
-      setCount(prevCount =>  prevCount - 1);
+      setCount((prevCount) =>  {
+        console.log(prevCount)
+        if(prevCount == 0) {
+            getCommitData();
+          }
+          return prevCount - 1;
+         });
     }, 1000);
-    if(count < 0) {
-      getCommitData();
-    }
     return () => clearInterval(interval);
   }, [commits] );
   useEffect( () => {
