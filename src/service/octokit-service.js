@@ -1,6 +1,6 @@
 const { Octokit } = require( '@octokit/core' );
 const octokit = new Octokit( {
-  auth: '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'
+  auth: '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'
 } );
 async function getCommits ()
 {

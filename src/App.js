@@ -14,7 +14,7 @@ function App ()
   return (
     <div className="container">
       <div className="body">
-       {commits.map((commit) => <Commit data={commit.commit} />)}
+       {commits.map((commit) => <Commit key={commit.sha} data={commit.commit} />)}
       </div>
     </div>
   );
