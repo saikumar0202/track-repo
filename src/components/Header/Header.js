@@ -4,7 +4,7 @@ const Header = () =>
 {
   return (
     <header className="header">
-      <h1>Track repo commits</h1>
+      <h1>TrackRepo</h1>
     </header>
   );
 };

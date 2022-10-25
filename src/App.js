@@ -38,7 +38,7 @@ function App ()
           <h2>Commit History</h2>
           <div>
             <div className='timer'>
-              Refresh in {count} Sec
+              Refresh in {count} Sec(s)
             </div>
             <div>
               <button onClick={handleRefresh}>refresh now</button>
