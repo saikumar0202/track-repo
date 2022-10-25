@@ -45,7 +45,9 @@ function App ()
             </div>
           </div>
         </div>
-        {commits.map((commit) => <Commit key={commit.sha} data={commit.commit} />)}
+        <div className="commits-wrapper">
+          {commits.map((commit) => <Commit key={commit.sha} data={commit.commit} />)}
+        </div>
         </div>
       </div>
     </div>

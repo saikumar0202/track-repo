@@ -39,3 +39,7 @@
   font-size: 14px;
   margin-bottom: 0.3rem;
 }
+.commits-wrapper {
+  max-height: 70vh;
+  overflow-y: auto;
+}
