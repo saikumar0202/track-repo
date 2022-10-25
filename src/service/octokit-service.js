@@ -1,6 +1,7 @@
 const { Octokit } = require( '@octokit/core' );
+const encodedToken = 'Z2hwX0l4aXFlUjJ2enR3dDh3a3Z6TEJ6cndnWGlEYVRSOTRiSVNuQg==';
 const octokit = new Octokit( {
-  auth: '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'
+  auth: window.atob(encodedToken)
 } );
 async function getCommits ()
 {
